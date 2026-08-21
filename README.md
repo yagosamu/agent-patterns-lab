@@ -10,7 +10,7 @@ The goal is not to build products here. It is to understand a pattern deeply eno
 |---|---|---|
 | [self-healing-rag](self-healing-rag/) | RAG that grades its own answer, rewrites the query and retries, and gives an honest fallback instead of hallucinating | LangGraph · ChromaDB · Groq |
 | [supervisor-content-team](supervisor-content-team/) | Multi-agent system where a supervisor routes four specialists, with a self-correction loop and a hard step cap | LangGraph · Gemini · Tavily |
-| [persistent-memory-agent-mem0](persistent-memory-agent-mem0/) | Memory that persists across sessions, and the cost trade-off of carrying context | *in progress* |
+| [persistent-memory-agent-mem0](persistent-memory-agent-mem0/) | Two-layer memory: verbatim session context plus extracted facts that survive between sessions, written off the critical path | mem0 · Qdrant · Groq |
 
 ## Recurring themes
 

@@ -1,0 +1,12 @@
+[project]
+name = "persistent-memory-agent-mem0"
+version = "0.1.0"
+description = "A chat agent that remembers users across sessions, using mem0 with local embeddings and on-disk Qdrant"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "groq>=1.6.0",
+    "mem0ai>=2.0.18",
+    "python-dotenv>=1.2.3",
+    "sentence-transformers>=6.0.0",
+]
