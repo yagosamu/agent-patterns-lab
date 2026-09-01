@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <text x="30" y="34" font-size="16" font-weight="600" fill="#1f2328">Leaks and false blocks by guard configuration</text>
+  <text x="30" y="54" font-size="12" fill="#656d76">3 runs per configuration, openai/gpt-oss-120b. Lower is better on both bars.</text>
+
+  <g font-size="11" fill="#656d76">
+    <line x1="60" y1="300" x2="740" y2="300" stroke="#d0d7de" stroke-width="1"/>
+    <line x1="60" y1="240" x2="740" y2="240" stroke="#eaeef2" stroke-width="1"/>
+    <line x1="60" y1="180" x2="740" y2="180" stroke="#eaeef2" stroke-width="1"/>
+    <line x1="60" y1="120" x2="740" y2="120" stroke="#eaeef2" stroke-width="1"/>
+    <line x1="60" y1="60" x2="740" y2="60" stroke="#eaeef2" stroke-width="1"/>
+    <text x="52" y="304" text-anchor="end">0</text>
+    <text x="52" y="244" text-anchor="end">0.5</text>
+    <text x="52" y="184" text-anchor="end">1.0</text>
+    <text x="52" y="124" text-anchor="end">1.5</text>
+    <text x="52" y="64" text-anchor="end">2.0</text>
+  </g>
+
+  <g>
+    <rect x="86" y="60" width="40" height="240" fill="#cf222e"/>
+    <text x="106" y="52" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">2.0</text>
+    <text x="150" y="294" text-anchor="middle" font-size="11" font-weight="600" fill="#8250df">0</text>
+  </g>
+
+  <g>
+    <rect x="222" y="290" width="40" height="10" fill="#dafbe1" stroke="#2da44e" stroke-width="1.5"/>
+    <text x="242" y="282" text-anchor="middle" font-size="11" font-weight="600" fill="#1a7f37">0</text>
+    <text x="286" y="294" text-anchor="middle" font-size="11" font-weight="600" fill="#1a7f37">0</text>
+    <rect x="212" y="272" width="104" height="36" fill="none" stroke="#2da44e" stroke-width="1.5" stroke-dasharray="3 3" rx="4"/>
+  </g>
+
+  <g>
+    <rect x="358" y="180" width="40" height="120" fill="#cf222e"/>
+    <text x="378" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">1.0</text>
+    <rect x="402" y="180" width="40" height="120" fill="#bf8700"/>
+    <text x="422" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#9a6700">1</text>
+  </g>
+
+  <g>
+    <rect x="494" y="144" width="40" height="156" fill="#cf222e"/>
+    <text x="514" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">1.3</text>
+    <rect x="538" y="180" width="40" height="120" fill="#bf8700"/>
+    <text x="558" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#9a6700">1</text>
+  </g>
+
+  <g>
+    <rect x="630" y="180" width="40" height="120" fill="#cf222e"/>
+    <text x="650" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">1.0</text>
+    <rect x="674" y="180" width="40" height="120" fill="#bf8700"/>
+    <text x="694" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#9a6700">1</text>
+  </g>
+
+  <g font-size="11" fill="#1f2328" text-anchor="middle">
+    <text x="128" y="322">off</text>
+    <text x="264" y="322" font-weight="600">prompt-only</text>
+    <text x="400" y="322">classifier</text>
+    <text x="536" y="322">classifier+judge</text>
+    <text x="672" y="322">full stack</text>
+  </g>
+
+  <text x="264" y="340" text-anchor="middle" font-size="10" font-weight="600" fill="#1a7f37">only rung at zero on both</text>
+
+  <g font-size="12">
+    <rect x="240" y="364" width="12" height="12" fill="#cf222e"/>
+    <text x="258" y="374" fill="#1f2328">leaked, of 6 attacks</text>
+    <rect x="400" y="364" width="12" height="12" fill="#bf8700"/>
+    <text x="418" y="374" fill="#1f2328">falsely blocked, of 5 benign requests</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+.env
+__pycache__/
+.python-version
+.venv/
+# Generated artefacts. results.json and leaderboard.md are kept on purpose:
+# they are the evidence the README cites.
+output/cache.sqlite
+output/*.log
