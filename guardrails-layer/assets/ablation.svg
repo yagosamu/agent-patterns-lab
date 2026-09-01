@@ -1,70 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-  <rect width="760" height="400" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="526" viewBox="0 0 820 526" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="leak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e5484d"/>
+      <stop offset="100%" stop-color="#cd2b31"/>
+    </linearGradient>
+    <linearGradient id="fp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0a458"/>
+      <stop offset="100%" stop-color="#c98a35"/>
+    </linearGradient>
+  </defs>
 
-  <text x="30" y="34" font-size="16" font-weight="600" fill="#1f2328">Leaks and false blocks by guard configuration</text>
-  <text x="30" y="54" font-size="12" fill="#656d76">3 runs per configuration, openai/gpt-oss-120b. Lower is better on both bars.</text>
+  <rect width="820" height="526" rx="10" fill="#fcfcfd"/>
+  <rect x="0.5" y="0.5" width="819" height="525" rx="10" fill="none" stroke="#eceef0"/>
 
-  <g font-size="11" fill="#656d76">
-    <line x1="60" y1="300" x2="740" y2="300" stroke="#d0d7de" stroke-width="1"/>
-    <line x1="60" y1="240" x2="740" y2="240" stroke="#eaeef2" stroke-width="1"/>
-    <line x1="60" y1="180" x2="740" y2="180" stroke="#eaeef2" stroke-width="1"/>
-    <line x1="60" y1="120" x2="740" y2="120" stroke="#eaeef2" stroke-width="1"/>
-    <line x1="60" y1="60" x2="740" y2="60" stroke="#eaeef2" stroke-width="1"/>
-    <text x="52" y="304" text-anchor="end">0</text>
-    <text x="52" y="244" text-anchor="end">0.5</text>
-    <text x="52" y="184" text-anchor="end">1.0</text>
-    <text x="52" y="124" text-anchor="end">1.5</text>
-    <text x="52" y="64" text-anchor="end">2.0</text>
+  <text x="44" y="44" font-size="11" font-weight="600" fill="#9ba1a6" letter-spacing="1.2">GUARDRAILS ABLATION</text>
+
+  <g font-size="12" fill="#5c6166">
+    <rect x="500" y="34" width="10" height="10" rx="2.5" fill="url(#leak)"/>
+    <text x="517" y="43">leaked (of 6)</text>
+    <rect x="622" y="34" width="10" height="10" rx="2.5" fill="url(#fp)"/>
+    <text x="639" y="43">false blocks (of 5)</text>
+  </g>
+
+  <text x="44" y="72" font-size="13.5" fill="#5c6166">3 runs per configuration, openai/gpt-oss-120b. Lower is better on both bars.</text>
+
+  <rect x="217" y="104" width="120" height="230" rx="8" fill="#e9f9ee" opacity="0.85"/>
+
+  <g stroke="#eceef0" stroke-width="1">
+    <line x1="70" y1="310" x2="770" y2="310" stroke="#dfe3e6"/>
+    <line x1="70" y1="257" x2="770" y2="257"/>
+    <line x1="70" y1="205" x2="770" y2="205"/>
+    <line x1="70" y1="152" x2="770" y2="152"/>
+    <line x1="70" y1="100" x2="770" y2="100"/>
+  </g>
+  <g font-size="11" fill="#9ba1a6" text-anchor="end">
+    <text x="58" y="314">0</text>
+    <text x="58" y="261">0.5</text>
+    <text x="58" y="209">1.0</text>
+    <text x="58" y="156">1.5</text>
+    <text x="58" y="104">2.0</text>
   </g>
 
   <g>
-    <rect x="86" y="60" width="40" height="240" fill="#cf222e"/>
-    <text x="106" y="52" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">2.0</text>
-    <text x="150" y="294" text-anchor="middle" font-size="11" font-weight="600" fill="#8250df">0</text>
+    <rect x="96" y="100" width="38" height="210" rx="4" fill="url(#leak)"/>
+    <text x="115" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#cd2b31">2.0</text>
+    <rect x="144" y="306" width="38" height="4" rx="2" fill="#dfe3e6"/>
+    <text x="163" y="298" text-anchor="middle" font-size="12" fill="#9ba1a6">0</text>
   </g>
 
   <g>
-    <rect x="222" y="290" width="40" height="10" fill="#dafbe1" stroke="#2da44e" stroke-width="1.5"/>
-    <text x="242" y="282" text-anchor="middle" font-size="11" font-weight="600" fill="#1a7f37">0</text>
-    <text x="286" y="294" text-anchor="middle" font-size="11" font-weight="600" fill="#1a7f37">0</text>
-    <rect x="212" y="272" width="104" height="36" fill="none" stroke="#2da44e" stroke-width="1.5" stroke-dasharray="3 3" rx="4"/>
+    <rect x="234" y="306" width="38" height="4" rx="2" fill="#8fcfa8"/>
+    <text x="253" y="298" text-anchor="middle" font-size="12" font-weight="600" fill="#18794e">0</text>
+    <rect x="282" y="306" width="38" height="4" rx="2" fill="#8fcfa8"/>
+    <text x="301" y="298" text-anchor="middle" font-size="12" font-weight="600" fill="#18794e">0</text>
   </g>
 
   <g>
-    <rect x="358" y="180" width="40" height="120" fill="#cf222e"/>
-    <text x="378" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">1.0</text>
-    <rect x="402" y="180" width="40" height="120" fill="#bf8700"/>
-    <text x="422" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#9a6700">1</text>
+    <rect x="372" y="205" width="38" height="105" rx="4" fill="url(#leak)"/>
+    <text x="391" y="197" text-anchor="middle" font-size="12" font-weight="600" fill="#cd2b31">1.0</text>
+    <rect x="420" y="205" width="38" height="105" rx="4" fill="url(#fp)"/>
+    <text x="439" y="197" text-anchor="middle" font-size="12" font-weight="600" fill="#a15c07">1</text>
   </g>
 
   <g>
-    <rect x="494" y="144" width="40" height="156" fill="#cf222e"/>
-    <text x="514" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">1.3</text>
-    <rect x="538" y="180" width="40" height="120" fill="#bf8700"/>
-    <text x="558" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#9a6700">1</text>
+    <rect x="510" y="173" width="38" height="137" rx="4" fill="url(#leak)"/>
+    <text x="529" y="165" text-anchor="middle" font-size="12" font-weight="600" fill="#cd2b31">1.3</text>
+    <rect x="558" y="205" width="38" height="105" rx="4" fill="url(#fp)"/>
+    <text x="577" y="197" text-anchor="middle" font-size="12" font-weight="600" fill="#a15c07">1</text>
   </g>
 
   <g>
-    <rect x="630" y="180" width="40" height="120" fill="#cf222e"/>
-    <text x="650" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#cf222e">1.0</text>
-    <rect x="674" y="180" width="40" height="120" fill="#bf8700"/>
-    <text x="694" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#9a6700">1</text>
+    <rect x="648" y="205" width="38" height="105" rx="4" fill="url(#leak)"/>
+    <text x="667" y="197" text-anchor="middle" font-size="12" font-weight="600" fill="#cd2b31">1.0</text>
+    <rect x="696" y="205" width="38" height="105" rx="4" fill="url(#fp)"/>
+    <text x="715" y="197" text-anchor="middle" font-size="12" font-weight="600" fill="#a15c07">1</text>
   </g>
 
-  <g font-size="11" fill="#1f2328" text-anchor="middle">
-    <text x="128" y="322">off</text>
-    <text x="264" y="322" font-weight="600">prompt-only</text>
-    <text x="400" y="322">classifier</text>
-    <text x="536" y="322">classifier+judge</text>
-    <text x="672" y="322">full stack</text>
+  <g font-size="12" text-anchor="middle" fill="#5c6166">
+    <text x="139" y="334">off</text>
+    <text x="277" y="334" font-weight="600" fill="#18794e">prompt-only</text>
+    <text x="415" y="334">classifier</text>
+    <text x="553" y="334">classifier+judge</text>
+    <text x="691" y="334">full stack</text>
   </g>
 
-  <text x="264" y="340" text-anchor="middle" font-size="10" font-weight="600" fill="#1a7f37">only rung at zero on both</text>
+  <g>
+    <rect x="197" y="350" width="160" height="22" rx="11" fill="#e9f9ee"/>
+    <text x="277" y="365" text-anchor="middle" font-size="11" font-weight="600" fill="#18794e">only rung at zero on both</text>
+  </g>
 
-  <g font-size="12">
-    <rect x="240" y="364" width="12" height="12" fill="#cf222e"/>
-    <text x="258" y="374" fill="#1f2328">leaked, of 6 attacks</text>
-    <rect x="400" y="364" width="12" height="12" fill="#bf8700"/>
-    <text x="418" y="374" fill="#1f2328">falsely blocked, of 5 benign requests</text>
+  <g>
+    <rect x="44" y="406" width="358" height="86" rx="8" fill="#fff5f5"/>
+    <rect x="44" y="406" width="4" height="86" rx="2" fill="#e5484d"/>
+    <text x="66" y="434" font-size="14.5" font-weight="700" fill="#11181c">Layers above the prompt made it worse</text>
+    <text x="66" y="456" font-size="12" fill="#5c6166">Detection reintroduced a leak the prompt</text>
+    <text x="66" y="473" font-size="12" fill="#5c6166">had closed, and blocked a real request.</text>
+  </g>
+
+  <g>
+    <rect x="418" y="406" width="358" height="86" rx="8" fill="#f5f6ff"/>
+    <rect x="418" y="406" width="4" height="86" rx="2" fill="#5b5bd6"/>
+    <text x="440" y="434" font-size="14.5" font-weight="700" fill="#11181c">Model capability did not matter</text>
+    <text x="440" y="456" font-size="12" fill="#5c6166">A 6x larger model produced identical</text>
+    <text x="440" y="473" font-size="12" fill="#5c6166">outcomes on four of five rungs.</text>
   </g>
 </svg>
