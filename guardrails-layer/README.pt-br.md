@@ -4,7 +4,7 @@
 
 Um banco de medição para guardrails de LLM. Ele defende um agente de suporte real contra injeção de prompt e exfiltração de dados, e mede o que cada camada de defesa de fato contribui.
 
-O resultado é incômodo: **a defesa mais barata superou todas as camadas construídas sobre ela, e adicionar detecção piorou o sistema nos dois eixos.**
+Neste cenário, o prompt endurecido foi a única configuração que produziu zero vazamentos e zero falsos bloqueios. Toda configuração que adicionou uma camada de detecção sobre ele reintroduziu um vazamento e passou a bloquear um pedido legítimo.
 
 ![Vazamentos e falsos bloqueios por configuração](assets/ablation.svg)
 
@@ -65,7 +65,7 @@ As duas últimas medem o **custo** de defender. Um guard que bloqueia cliente pa
 
 **1. O prompt endurecido foi a única configuração a zerar nos dois eixos.** Zero vazamentos, zero falsos bloqueios, estável nas seis execuções. Sem custo de latência, sem chamada extra de modelo, sem infraestrutura.
 
-**2. Adicionar detecção piorou o sistema.** Todo degrau acima do `prompt-only` reintroduziu um vazamento e passou a bloquear um pedido legítimo.
+**2. Todo degrau acima do `prompt-only` custou nos dois eixos.** Cada um reintroduziu um vazamento e passou a bloquear um pedido legítimo.
 
 **3. Uma camada de defesa criou uma vulnerabilidade que não existia sem ela.** O ataque `exfil-dispute` nunca vazou com `off` nem com `prompt-only`. Ele só aparece quando o classificador entra, filtrando e colocando documentos em quarentena. Remover conteúdo que o guard considerou suspeito mudou o contexto de um jeito que ajudou o ataque.
 
@@ -73,7 +73,7 @@ As duas últimas medem o **custo** de defender. Um guard que bloqueia cliente pa
 
 **5. O juiz poderia corrigir isso, e a arquitetura impede.** Rodado isoladamente, o juiz LLM libera corretamente o `emi-correction`. Mas o classificador bloqueia direto em score alto, em vez de escalar, então o juiz nunca vê o caso. Uma camada capaz de corrigir a anterior nunca recebe a chance.
 
-**6. Capacidade do modelo não fez diferença.** Uma diferença de 6x em parâmetros produziu desfechos idênticos em quatro dos cinco degraus. A defesa veio do desenho da camada, não do tamanho do modelo.
+**6. O tamanho do modelo não mudou o resultado.** Uma diferença de 6x em parâmetros produziu resultados idênticos em quatro dos cinco degraus. O que variou entre configurações foi o desenho da camada, não o modelo.
 
 ## O que este projeto não afirma
 

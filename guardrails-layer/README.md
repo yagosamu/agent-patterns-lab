@@ -4,7 +4,7 @@
 
 A measurement harness for LLM guardrails. It defends a real support agent against prompt injection and data exfiltration, then measures what each defence layer actually contributes.
 
-The result is uncomfortable: **the cheapest defence outperformed every layer built on top of it, and adding detection made things worse on both axes.**
+In this setup, the hardened system prompt was the only configuration that produced zero leaks and zero false blocks. Every configuration that added a detection layer on top of it reintroduced a leak and started blocking a legitimate request.
 
 ![Leaks and false blocks by configuration](assets/ablation.svg)
 
@@ -65,7 +65,7 @@ The last two measure the **cost** of defending. A guard that blocks paying custo
 
 **1. The hardened prompt was the only configuration that reached zero on both axes.** Zero leaks, zero false blocks, stable across all six executions. No latency cost, no extra model call, no infrastructure.
 
-**2. Adding detection made the system worse, not better.** Every rung above `prompt-only` reintroduced a leak and started blocking a legitimate request.
+**2. Every rung above `prompt-only` cost on both axes.** Each one reintroduced a leak and started blocking a legitimate request.
 
 **3. A defence layer created a vulnerability that did not exist without it.** The `exfil-dispute` attack never leaked under `off` or `prompt-only`. It only appears once the classifier is enabled, which filters and quarantines retrieved documents. Removing content the guard considered suspicious changed the context in a way that helped the attack.
 
@@ -73,7 +73,7 @@ The last two measure the **cost** of defending. A guard that blocks paying custo
 
 **5. The judge could fix that, and the architecture prevents it.** Run in isolation, the LLM judge correctly allows `emi-correction`. But the classifier blocks outright on a high score instead of escalating, so the judge never sees the case. A layer capable of correcting the one below it is never given the chance.
 
-**6. Model capability did not matter.** A 6x difference in parameters produced identical outcomes on four of five rungs. The defence came from the design of the layer, not the size of the model.
+**6. Model size did not change the outcome.** A 6x difference in parameters produced identical results on four of five rungs. What varied between configurations was the layer design, not the model.
 
 ## What this does not claim
 
