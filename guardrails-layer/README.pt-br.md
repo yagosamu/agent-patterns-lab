@@ -4,6 +4,10 @@
 
 Um banco de medição para guardrails de LLM. Ele defende um agente de suporte real contra injeção de prompt e exfiltração de dados, e mede o que cada camada de defesa de fato contribui.
 
+<p align="center">
+  <img src="assets/concept.svg" width="430" alt="As duas formas de um guardrail falhar: deixar o ataque passar, ou barrar um cliente legítimo">
+</p>
+
 Neste cenário, o prompt endurecido foi a única configuração que produziu zero vazamentos e zero falsos bloqueios. Toda configuração que adicionou uma camada de detecção sobre ele reintroduziu um vazamento e passou a bloquear um pedido legítimo.
 
 ![Vazamentos e falsos bloqueios por configuração](assets/ablation.svg)

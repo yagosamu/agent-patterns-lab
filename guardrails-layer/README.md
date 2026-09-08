@@ -4,6 +4,10 @@
 
 A measurement harness for LLM guardrails. It defends a real support agent against prompt injection and data exfiltration, then measures what each defence layer actually contributes.
 
+<p align="center">
+  <img src="assets/concept.svg" width="430" alt="Two ways a guardrail fails: it lets the attack through, or it stops a real customer">
+</p>
+
 In this setup, the hardened system prompt was the only configuration that produced zero leaks and zero false blocks. Every configuration that added a detection layer on top of it reintroduced a leak and started blocking a legitimate request.
 
 ![Leaks and false blocks by configuration](assets/ablation.svg)
