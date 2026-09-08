@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="46%" r="72%">
+      <stop offset="0%" stop-color="#161a1d"/>
+      <stop offset="100%" stop-color="#08090a"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3dd68c" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3dd68c" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="pass" gradientUnits="userSpaceOnUse" x1="0" y1="340" x2="0" y2="700">
+      <stop offset="0%" stop-color="#3dd68c" stop-opacity="0.12"/>
+      <stop offset="55%" stop-color="#3dd68c" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#3dd68c" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="atk" gradientUnits="userSpaceOnUse" x1="0" y1="340" x2="0" y2="620">
+      <stop offset="0%" stop-color="#ff6369" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ff6369" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="cust" gradientUnits="userSpaceOnUse" x1="0" y1="340" x2="0" y2="620">
+      <stop offset="0%" stop-color="#ffb757" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffb757" stop-opacity="1"/>
+    </linearGradient>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1440">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" filterUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1440">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="tg" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0.5 L10,5 L0,9.5 z" fill="#3dd68c"/></marker>
+    <marker id="tr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0.5 L10,5 L0,9.5 z" fill="#ff6369"/></marker>
+    <marker id="ta" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0.5 L10,5 L0,9.5 z" fill="#ffb757"/></marker>
+  </defs>
+
+  <rect width="1080" height="1440" fill="url(#vig)"/>
+  <g stroke="#ffffff" stroke-opacity="0.022" stroke-width="1">
+    <path d="M120 0V1440M240 0V1440M360 0V1440M480 0V1440M600 0V1440M720 0V1440M840 0V1440M960 0V1440"/>
+    <path d="M0 120H1080M0 240H1080M0 360H1080M0 480H1080M0 600H1080M0 720H1080M0 840H1080M0 960H1080M0 1080H1080M0 1200H1080M0 1320H1080"/>
+  </g>
+
+  <text x="72" y="132" font-size="58" font-weight="700" fill="#f4f6f8" letter-spacing="-1.6">Two ways a</text>
+  <text x="72" y="200" font-size="58" font-weight="700" fill="#f4f6f8" letter-spacing="-1.6">guardrail fails</text>
+  <text x="72" y="254" font-size="23" fill="#8b949e">It lets the attack through. Or it stops a real customer.</text>
+
+  <text x="72" y="330" font-size="15" font-weight="600" fill="#565e66" letter-spacing="1.8">REQUESTS</text>
+
+  <g stroke-width="5.5" fill="none" stroke-linecap="round">
+    <line x1="480" y1="350" x2="480" y2="962" stroke="url(#pass)" marker-end="url(#tg)" filter="url(#soft)"/>
+    <line x1="600" y1="350" x2="600" y2="962" stroke="url(#pass)" marker-end="url(#tg)" filter="url(#soft)"/>
+    <line x1="420" y1="350" x2="420" y2="614" stroke="url(#atk)" filter="url(#soft)"/>
+    <line x1="660" y1="350" x2="660" y2="614" stroke="url(#cust)" filter="url(#soft)"/>
+    <line x1="416" y1="610" x2="248" y2="470" stroke="#ff6369" stroke-opacity="0.9" marker-end="url(#tr)" filter="url(#soft)"/>
+    <line x1="664" y1="610" x2="832" y2="470" stroke="#ffb757" stroke-opacity="0.9" marker-end="url(#ta)" filter="url(#soft)"/>
+  </g>
+
+  <path d="M540,586 L700,632 L700,784 C700,850 640,890 540,916 C440,890 380,850 380,784 L380,632 Z"
+        fill="url(#shield)" stroke="#3dd68c" stroke-opacity="0.55" stroke-width="3"/>
+  <path d="M540,586 L700,632 L700,784 C700,850 640,890 540,916 C440,890 380,850 380,784 L380,632 Z"
+        fill="none" stroke="#3dd68c" stroke-opacity="0.16" stroke-width="12" filter="url(#soft)"/>
+  <text x="540" y="762" font-size="19" font-weight="600" fill="#8b949e" text-anchor="middle" letter-spacing="2">GUARDRAIL</text>
+
+  <g filter="url(#glow)">
+    <circle cx="420" cy="616" r="22" fill="#ff6369" fill-opacity="0.32"/>
+    <circle cx="660" cy="616" r="22" fill="#ffb757" fill-opacity="0.32"/>
+  </g>
+
+  <rect x="360" y="980" width="360" height="170" rx="22" fill="#0e1215" stroke="#ffffff" stroke-opacity="0.13"/>
+  <text x="540" y="1058" font-size="34" font-weight="700" fill="#f4f6f8" text-anchor="middle" letter-spacing="1">LLM</text>
+  <text x="540" y="1098" font-size="19" fill="#6e7681" text-anchor="middle">your product</text>
+
+  <line x1="72" y1="1218" x2="1008" y2="1218" stroke="#ffffff" stroke-opacity="0.07"/>
+
+  <g>
+    <circle cx="86" cy="1278" r="10" fill="#ff6369"/>
+    <text x="118" y="1287" font-size="25" fill="#c9d1d9">attack deflected. The guardrail worked.</text>
+
+    <circle cx="86" cy="1348" r="10" fill="#ffb757"/>
+    <text x="118" y="1357" font-size="25" font-weight="600" fill="#f4f6f8">real customer deflected. It cost you.</text>
+
+    <text x="118" y="1408" font-size="21" fill="#6e7681">Most projects only ever measure the first one.</text>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+[project]
+name = "graph-rag"
+version = "0.1.0"
+description = "Knowledge-graph retrieval over Neo4j: an LLM extracts entities and relationships, queries answer by traversing the graph"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.141.1",
+    "groq>=1.7.0",
+    "neo4j>=6.3.0",
+    "python-dotenv>=1.2.3",
+    "uvicorn>=0.52.4",
+]

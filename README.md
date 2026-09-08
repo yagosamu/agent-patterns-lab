@@ -10,6 +10,7 @@ The goal is not to build products here. It is to understand a pattern deeply eno
 |---|---|---|
 | [self-healing-rag](self-healing-rag/) | RAG that grades its own answer, rewrites the query and retries, and gives an honest fallback instead of hallucinating | LangGraph · ChromaDB · Groq |
 | [supervisor-content-team](supervisor-content-team/) | Multi-agent system where a supervisor routes four specialists, with a self-correction loop and a hard step cap | LangGraph · Gemini · Tavily |
+| [graph-rag](graph-rag/) | Retrieval by traversing a knowledge graph instead of a vector index, answering how entities connect rather than which passage looks similar | Neo4j · Groq · FastAPI · React |
 | [guardrails-layer](guardrails-layer/) | An ablation harness for LLM guardrails: five defence configurations measured against injection attacks and benign requests, reporting what each layer actually contributes | Groq · Presidio · Rich |
 | [persistent-memory-agent-mem0](persistent-memory-agent-mem0/) | Two-layer memory: verbatim session context plus extracted facts that survive between sessions, written off the critical path | mem0 · Qdrant · Groq |
 
